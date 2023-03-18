@@ -1,0 +1,19 @@
+.menuHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: goldenrod;
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    transform: translateY(4rem);
+}
+
+h3 + table {
+    width: 100%;
+    padding: 5rem;
+    background: white;
+}
+
+

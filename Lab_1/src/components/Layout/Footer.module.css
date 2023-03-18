@@ -1,0 +1,17 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+#reactArticle {
+    margin-top: 5rem;
+    color: #61dbfb;
+}
