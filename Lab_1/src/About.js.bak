@@ -1,0 +1,38 @@
+import Header from "./components/Layout/Header";
+import { useState } from "react";
+import Meals from "./components/Meals/Meals";
+import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
+import {Table} from "./components/Layout/Table";
+import {Footer} from "./components/Layout/Footer";
+
+function About() {
+
+
+  return (
+		<>
+        <Header />
+			<div>
+			<h1>
+				Опис предметної області та функціоналу WEB-додатку. 
+			</h1>
+			<p>
+				WEB-додаток створено для ресторану, у якого є працівники, що доставляють їжу.
+			</p>
+			<p>
+				За допомогою WEB-додатку:
+			</p>
+				<ol>
+					<li>Представлено меню ресторану</li>
+					<li>Забезпечено можливість додавати до кошику страви, які особа бажає замовити </li>
+					<li>Автоматичний підрахунок суми, яку потрібно сплатити за додані до кошику страви</li>
+					<li>Забезпечено можливість редагувати (змінювати кількість, видаляти) страви, які є у кошику </li>					
+				</ol>
+			</div>
+        <Footer />
+		
+		</>
+  );
+}
+
+export default About;
