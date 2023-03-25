@@ -1,0 +1,56 @@
+:root {
+  --yellow: #F9F54B;
+  --red: #D61355;
+  --blue: #0081C9;
+  --white: #EDEADE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 3rem;
+  background-color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer {
+  height: 3rem;
+  background-color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  display: grid;
+  grid-template-rows: calc(100vh - 6rem);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.section--2 {
+  background-color: var(--blue);
+}
+.section--3 {
+  background-color: var(--red);
+}
+.section--4 {
+  background-color: var(--white);
+}
+.section--5 {
+  background-color: var(--red);
+}
+
+input {
+  margin-left: 1rem;
+}/*# sourceMappingURL=index.css.map */
