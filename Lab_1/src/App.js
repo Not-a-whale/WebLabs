@@ -3,7 +3,6 @@ import { useState } from "react";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
-import {Table} from "./components/Layout/Table";
 import {Footer} from "./components/Layout/Footer";
 import { Routes, Route, Link } from 'react-router-dom';
 import About from './components/About/About';
