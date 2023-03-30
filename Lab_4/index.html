@@ -8,22 +8,76 @@
 </head>
 <body>
     <script>
-        function selectionSort(inputArr) { 
+
+
+
+
+        // 1 - Створити одновимірний масив, кількість елементів якого задана користувачем.
+        // Визначити максимальне та мінімальне значення серед елементів із парними та
+        // непарними номерами.
+
+        // Отримання кількості елементів масиву від користувача
+        const length = parseInt(prompt('Введіть кількість елементів масиву:'));
+
+        // Створення порожнього масиву
+        const arr = [];
+
+        // Заповнення масиву елементами
+        for (let i = 0; i < length; i++) {
+            const element = parseInt(prompt(`Введіть елемент масиву з індексом ${i}:`));
+            arr.push(element);
+        }
+
+        // Ініціалізація змінних для зберігання максимальних та мінімальних значень
+        let maxEven = -Infinity;
+        let minEven = Infinity;
+        let maxOdd = -Infinity;
+        let minOdd = Infinity;
+
+        // Пошук максимального та мінімального значень серед елементів з парними та непарними номерами
+        for (let i = 0; i < length; i++) {
+            if (i % 2 === 0) { // Якщо індекс елемента парний
+                if (arr[i] > maxEven) {
+                    maxEven = arr[i];
+                }
+                if (arr[i] < minEven) {
+                    minEven = arr[i];
+                }
+            } else { // Якщо індекс елемента непарний
+                if (arr[i] > maxOdd) {
+                    maxOdd = arr[i];
+                }
+                if (arr[i] < minOdd) {
+                    minOdd = arr[i];
+                }
+            }
+        }
+
+        // Виведення результатів
+        console.log(`Максимальне значення серед елементів з парними номерами: ${maxEven}`);
+        console.log(`Мінімальне значення серед елементів з парними номерами: ${minEven}`);
+        console.log(`Максимальне значення серед елементів з непарними номерами: ${maxOdd}`);
+        console.log(`Мінімальне значення серед елементів з непарними номерами: ${minOdd}`);
+
+
+
+        // 2 - Selection Sort
+        function selectionSort(inputArr) {
             let n = inputArr.length;
-                
+
             for(let i = 0; i < n; i++) {
                 // Finding the smallest number in the subarray
                 let min = i;
                 for(let j = i+1; j < n; j++){
                     if(inputArr[j] < inputArr[min]) {
-                        min=j; 
+                        min=j;
                     }
                 }
                 if (min != i) {
                     // Swapping the elements
-                    let tmp = inputArr[i]; 
+                    let tmp = inputArr[i];
                     inputArr[i] = inputArr[min];
-                    inputArr[min] = tmp;      
+                    inputArr[min] = tmp;
                 }
             }
             return inputArr;
