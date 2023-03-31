@@ -44,7 +44,8 @@
 
 td {
   height: calc(100vh - 11rem);
-  width: 25%;
+  min-width: 300px;
+  max-width: 300px;
 }
 
 input {
